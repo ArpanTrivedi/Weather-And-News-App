@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "social-media-app-53f00": {
+      "hosting": {
+        "watherapp": [
+          "social-media-app-53f00"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "social-media-app-53f00"
+  }
+}

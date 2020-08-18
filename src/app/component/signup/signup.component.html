@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card">
+
+        <div class="card-header text-center text-white bg-info">
+          {{"signup form" | uppercase}}
+        </div>
+
+        <div class="card-body p-2">
+          <form #f="ngForm" (ngSubmit)="submit(f)">
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" name="email" class="form-control" ngModel placeholder="Enter email" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" name="password" class="form-control" ngModel placeholder="Enter password" id="pwd">
+            </div>
+            <div class="card-footer bg-info text-center">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

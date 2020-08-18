@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card">
+
+        <div class="card-header text-center text-white bg-info">
+          {{"signin form" | uppercase}}
+        </div>
+
+        <div class="card-body">
+          <form #f="ngForm" (ngSubmit)="submit(f)">
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" name="email" class="form-control" ngModel placeholder="Enter email" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" name="password" class="form-control" ngModel placeholder="Enter password" id="pwd">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer bg-info text-center">
+          <button type="submit" class="btn btn-light text-dark" (click)="signInGoogle()"><i class="fa fa-google" aria-hidden="true"></i> SignIn With Google</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

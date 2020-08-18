@@ -1,0 +1,24 @@
+<div class="row" *ngIf="toggler" style="width: 100%;">
+  <div class="p-2 col-8 offset-2">
+    <div class="border border-info mb-2 p-2 bg-white" *ngFor="let data of datas">
+      <a [href]="data?.url" target="_blank">
+        <div class="row">
+          <div class="col-6">
+            <img [src]="data?.urlToImage" alt="news thumbnail" class="img-thumbnail" height="100%"/>
+          </div>
+          <div class="col-6">
+            <div>
+              <p class="text-warning">Author is {{data?.author}}</p>
+              <p class="text-info">Publish at <span class="text-dark">{{data?.publishedAt | uppercase}}</span></p>
+              <p class="text-dark"><span class="text-info">Description: -</span> {{data?.content}}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="text-center" *ngIf="!toggler">
+  <div class="spinner-border text-info">Loading...</div>
+</div>

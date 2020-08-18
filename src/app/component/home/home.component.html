@@ -1,0 +1,25 @@
+<div class="mt-2">
+  <div class="text-center p-2" *ngIf="!toggler">
+    <div class="input-group">
+      <input type="text" name="city" [(ngModel)]="city" class="form-control" placeholder="Enter Your City">
+      <div class="input-group-append">
+        <button class="btn btn-info" (click)="submit()">Search</button>
+      </div>
+    </div>
+
+
+    <div class="bg-dark p-4" *ngIf="toggler">
+      <p class="text-white">Weather of {{city}} is <span class="text-info">{{data?.weather[0]?.main}}</span></p>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div *ngIf="toggler" class="bg-info mt-3">
+  <p class="text-center text-white p-3">Weather of {{city}} is <span class="text-dark">{{data?.weather[0]?.main}}</span></p>
+  <agm-map [latitude]="data?.coord?.lat" [longitude]="data?.coord?.lon">
+    <agm-marker [latitude]="data?.coord?.lat" [longitude]="data?.coord?.lon"></agm-marker>
+  </agm-map>
+</div>
